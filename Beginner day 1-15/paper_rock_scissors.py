@@ -33,7 +33,7 @@ player = input("What do you choose? (R)ock, (P)aper or (S)cissors? ").lower()
 
 options = [rock, paper, scissors]
 
-computer_random = random.randint(0, len(options) -1)
+computer_random = random.randint(0, len(options) - 1)
 
 print("You picked: ")
 if player == "r":

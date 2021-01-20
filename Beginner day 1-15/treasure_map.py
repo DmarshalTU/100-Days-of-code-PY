@@ -12,4 +12,3 @@ row = int(position[1]) - 1
 print(col, row)
 map_1[row][col] = "X"
 print(f"{row1}\n{row2}\n{row3}\n")
-
