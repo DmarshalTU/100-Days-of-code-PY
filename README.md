@@ -4,6 +4,7 @@
 Python Pro Bootcamp at the London App Brewery, via Udemy.
 
 Python 3
+
 PyCharm, Jupyter Notebook, Google Colab
 Python Scripting and Automation
 Python Game Development
