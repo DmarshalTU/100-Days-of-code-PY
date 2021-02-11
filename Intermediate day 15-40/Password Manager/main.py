@@ -11,6 +11,7 @@ def generate_password():
     symbols = string.punctuation
 
     password = ''
+    
     for letter in range(0, 10):
         password += random.choice(alpha)
     for symbol in range(0, 10):
