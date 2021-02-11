@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
-import random
+from random import choice, shuffle, randint
 import string
 
 
@@ -10,10 +10,10 @@ def generate_password():
     numbers = string.digits
     symbols = string.punctuation
 
-    password = [random.choice(alpha) for _ in range(10)] + \
-               [random.choice(symbols) for _ in range(10)] + \
-               [random.choice(numbers) for _ in range(10)]
-    random.shuffle(password)
+    password = [choice(alpha) for _ in range(randint(8, 10))] + \
+               [choice(symbols) for _ in range(randint(8, 10))] + \
+               [choice(numbers) for _ in range(randint(8, 10))]
+    shuffle(password)
     password_entry.delete(0, END)
     password_entry.insert(0, ''.join(password))
 
