@@ -28,7 +28,9 @@ def add():
                                                                          f"Password: {password_entry.get()}")
         if is_ok:
             with open("data.txt", 'a') as data:
-                data.write(f"{website_entry.get()} | Username: {username_entry.get()} | Password: {password_entry.get()}\n")
+                data.write(f"{website_entry.get()} | "
+                           f"Username: {username_entry.get()} |"
+                           f" Password: {password_entry.get()}\n")
             website_entry.delete(0, END)
             username_entry.delete(0, END)
             password_entry.delete(0, END)
