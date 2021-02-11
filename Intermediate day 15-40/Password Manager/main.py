@@ -10,21 +10,16 @@ def generate_password():
     numbers = string.digits
     symbols = string.punctuation
 
-    password = ''
-    
-    for letter in range(0, 10):
-        password += random.choice(alpha)
-    for symbol in range(0, 10):
-        password += random.choice(symbols)
-    for number in range(0, 10):
-        password += random.choice(numbers)
-    shuffled_pass = list(password)
-    random.shuffle(shuffled_pass)
-    password_entry.insert(0, ''.join(shuffled_pass))
+    password = [random.choice(alpha) for _ in range(10)] + \
+               [random.choice(symbols) for _ in range(10)] + \
+               [random.choice(numbers) for _ in range(10)]
+    random.shuffle(password)
+    password_entry.delete(0, END)
+    password_entry.insert(0, ''.join(password))
 
 
 def add():
-    if len(website_entry.get()) == 0 or len(username_entry.get()) == 0 or len(password_entry.get()):
+    if len(website_entry.get()) == 0 or len(username_entry.get()) == 0 or len(password_entry.get()) == 0:
         messagebox.showinfo(title="Oops..", message="Make sure to fill in all the information!")
     else:
         is_ok = messagebox.askokcancel(title="Password Manager", message=f"The new credentials is:\n"
