@@ -6,8 +6,8 @@ import time
 LAT = 31.690782
 LNG = 35.250694
 
-EMAIL = 'iss.python@gmail.com'
-PASS = 'tpenaebqstvdovcu'
+EMAIL = ''
+PASS = ''
 
 
 def is_iss_overhead():
