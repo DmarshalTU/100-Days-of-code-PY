@@ -2,7 +2,7 @@ import requests
 from twilio.rest import Client
 import os
 
-# 6:00 UTC, run export env SID={account_sid};export env AUTH={auth_token}; python main.py
+# 6:00 UTC, run export env SID={account_sid};export env AUTH={auth_token}; python server.py
 account_sid = os.environ.get()
 auth_token = os.environ.get()
 
