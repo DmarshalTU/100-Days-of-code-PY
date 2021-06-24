@@ -25,12 +25,12 @@ operations = {
 def calc():
     num1 = float(input("Enter the firs number: "))
 
-    for symbol in operations:
-        print(symbol)
-
     should_continue = True
 
     while should_continue:
+        for symbol in operations:
+            print(symbol)
+
         operation_symbol = input("Pick an operation: ")
 
         num2 = float(input("Enter the next number: "))
@@ -40,7 +40,7 @@ def calc():
 
         print(f"{num1} {operation_symbol} {num2} = {answer}")
 
-        if input(f"Type y to continue with {answer} or n to start new calculation: ").lower() == "y":
+        if input(f"Type (y) to continue with {answer} or (n) to start new calculation: ").lower() == "y":
             num1 = answer
         else:
             should_continue = False
